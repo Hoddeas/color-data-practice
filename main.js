@@ -56,7 +56,7 @@ function redPinkFamilies() {
   outputEl.innerHTML = "<h3>Count Red/Pink Family Colors</h3>";
   let colorsInRedAndPinkFamily = 0;
   for (let i = 0; i < colorData.length; i++) {
-    if (colorData[i].family === "Red" ||colorData[i].family === "Pink") {
+    if (colorData[i].family === "Red" || colorData[i].family === "Pink") {
       colorsInRedAndPinkFamily++;
     }
   }
@@ -69,7 +69,7 @@ function familySearch() {
   let userInput = prompt("Enter color family name:");
   let userInputColorFamilyCount = 0;
   for (let i = 0; i < colorData.length; i++) {
-    if (colorData[i].family == userInput) {
+    if (colorData[i].family === userInput) {
       userInputColorFamilyCount++;
       outputEl.innerHTML += `${colorData[i].name} - ${colorData[i].family} <br>`;
     }
@@ -83,7 +83,7 @@ function startLetterSearch() {
   let userInput = prompt("Enter color starting letter:");
   let userInputColorStartingLetterCount = 0;
   for (let i = 0; i < colorData.length; i++) {
-    if (colorData[i].name[0] == userInput) {
+    if (colorData[i].name[0] === userInput) {
       userInputColorStartingLetterCount++;
       outputEl.innerHTML += `${colorData[i].name}<br>`;
     }
